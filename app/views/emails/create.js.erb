@@ -1,0 +1,10 @@
+document.getElementById("email-list").insertRow(1);
+document.getElementById("email-list").rows[1].insertCell(0);
+if (document.getElementById("email-list").rows[2].cells[1].innerHTML != null){
+  document.getElementById("email-list").rows[1].insertCell(1);
+  document.getElementById("email-list").rows[1].cells[1].innerHTML = document.getElementById("email-list").rows[2].cells[1].innerHTML;
+  document.getElementById("email-list").rows[2].deleteCell(1);
+  document.getElementById("email-list").rows[1].cells[1].rowSpan = document.getElementById("email-list").rows.length;
+}
+document.getElementById("email-list").rows[1].cells[0].classList.add("col-md-2");
+document.getElementById("email-list").rows[1].cells[0].innerHTML = "<%= j render "email_list", email: @email %>";

@@ -1,0 +1,5 @@
+if (document.getElementById("email-list").rows[1].cells[1] == null){
+  document.getElementById("email-list").rows[1].insertCell(1);
+  document.getElementById("email-list").rows[1].cells[1].rowSpan = document.getElementById("email-list").rows.length ;
+}
+document.getElementById("email-list").rows[1].cells[1].innerHTML = "<%= j render "email_show", email: @email %>";

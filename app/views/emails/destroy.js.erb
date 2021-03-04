@@ -1,0 +1,6 @@
+document.getElementById("email-list").rows[1].deleteCell(1);
+for (let i = 0; i < document.getElementById("email-list").rows.length; i++) {
+  if(("<%= j @email.object.gsub(/[^0-9A-Za-z ]/, "") %>") === (document.getElementById("email-list").rows[i].cells[0].textContent.trim().replace(/[^\w\s]/gi, ''))){
+    document.getElementById("email-list").deleteRow(i);
+  };
+}
