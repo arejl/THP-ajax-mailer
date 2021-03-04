@@ -1,6 +1,6 @@
 document.getElementById("email-list").insertRow(1);
 document.getElementById("email-list").rows[1].insertCell(0);
-if (document.getElementById("email-list").rows[2].cells[1].innerHTML != null){
+if (document.getElementById("email-list").rows[2].cells[1] != null){
   document.getElementById("email-list").rows[1].insertCell(1);
   document.getElementById("email-list").rows[1].cells[1].innerHTML = document.getElementById("email-list").rows[2].cells[1].innerHTML;
   document.getElementById("email-list").rows[2].deleteCell(1);
