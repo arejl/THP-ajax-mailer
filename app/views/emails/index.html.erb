@@ -13,7 +13,7 @@
   </thead>
   <% Email.all.order("created_at DESC").each do |email| %>
     <tr>
-      <td class="col-md-2">
+      <td class="col-md-2 p-0">
         <%= render "email_list", email: email %>
       </td>
     </tr>
