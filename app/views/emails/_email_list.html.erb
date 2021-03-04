@@ -1,6 +1,6 @@
 <% if email.read == false %>
-  <%= link_to email.object, email_path(id: email.id), method: "get", class: "font-weight-bold btn btn-link w-100", remote: true %>
+  <%= link_to email.object, email_path(id: email.id), method: "get", id: "#{email.id}", class: "font-weight-bold btn btn-link w-100 text-left", remote: true %>
 <% else %>
-  <%= link_to email.object, email_path(id: email.id), method: "get", class: "btn btn-link w-100", remote: true %>
+  <%= link_to email.object, email_path(id: email.id), method: "get", id: "#{email.id}", class: "btn btn-link w-100 text-left", remote: true %>
 <% end %>
 

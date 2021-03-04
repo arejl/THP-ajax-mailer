@@ -6,5 +6,5 @@ if (document.getElementById("email-list").rows[2].cells[1] != null){
   document.getElementById("email-list").rows[2].deleteCell(1);
   document.getElementById("email-list").rows[1].cells[1].rowSpan = document.getElementById("email-list").rows.length;
 }
-document.getElementById("email-list").rows[1].cells[0].classList.add("col-md-2");
+document.getElementById("email-list").rows[1].cells[0].classList.add("p-0");
 document.getElementById("email-list").rows[1].cells[0].innerHTML = "<%= j render "email_list", email: @email %>";

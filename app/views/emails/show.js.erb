@@ -4,10 +4,9 @@ if (document.getElementById("email-list").rows[1].cells[1] == null){
 };
 
 for (let i = 0; i < document.getElementById("email-list").rows.length; i++) {
-  if(("<%= j @email.object.gsub(/[^0-9A-Za-z ]/, "") %>") === (document.getElementById("email-list").rows[i].cells[0].textContent.trim().replace(/[^\w\s]/gi, ''))){
+  if(document.getElementById("email-list").rows[i].cells[0].innerHTML.includes("<%= j params[:id] %>")){
     document.getElementById("email-list").rows[i].cells[0].innerHTML = "<%= j render "email_list", email: @email %>";
   };
 };
 
 document.getElementById("email-list").rows[1].cells[1].innerHTML = "<%= j render "email_show", email: @email %>";
-

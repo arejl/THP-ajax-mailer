@@ -4,16 +4,16 @@
   </div>
 <% end %>
 
-<table id = "email-list" class="table table-bordered">
+<table id = "email-list" class="table table-bordered col-md-10 mx-auto">
   <thead class="thead-light"> 
     <tr>
-        <th class="col-md-2">Liste des emails</th>
-        <th class="col-md-10">Email sélectionné</th>
+        <th class="col-md-4">Liste des emails</th>
+        <th class="col-md-8">Email sélectionné</th>
     </tr>
   </thead>
   <% Email.all.order("created_at DESC").each do |email| %>
     <tr>
-      <td class="col-md-2 p-0">
+      <td class="p-0">
         <%= render "email_list", email: email %>
       </td>
     </tr>
